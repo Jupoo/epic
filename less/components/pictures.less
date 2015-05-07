@@ -1,0 +1,94 @@
+.pictures__row {
+    padding-bottom: 70px;
+}
+.pictures__item {
+    overflow: hidden;
+    position: relative;
+    height: 258px;
+
+    -moz-border-radius: @border-radius-base;
+    -webkit-border-radius: @border-radius-base;
+    -khtml-border-radius: @border-radius-base;
+    border-radius: @border-radius-base;
+}
+.pictures__img {
+    display: block;
+}
+.pictures--item-magnifier {
+    cursor: pointer;
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 258px;
+        background: url("../img/icon_magnifier.png") no-repeat center,
+                    url("../img/00000050.png") repeat 0px 0px;
+
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+        filter: alpha(opacity=0); /* IE 5-7 */
+        -moz-opacity: 0; /* Netscape */
+        -khtml-opacity: 0;  /* Safari 1.x */
+        opacity: 0; /* Для остальных браузеров */
+        zoom: 1;
+
+        visibility: hidden;
+
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+    &:hover:after {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";  /* IE 8 */
+        filter: alpha(opacity=1); /* IE 5-7 */
+        -moz-opacity: 1; /* Netscape */
+        -khtml-opacity: 1;  /* Safari 1.x */
+        opacity: 1; /* Для остальных браузеров */
+        zoom: 1;
+
+        visibility: visible;
+    }
+}
+.pictures--item-title {
+    &:after {
+        content: "Всплывашечка с подписью поверх фотографии";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 20px;
+        background: url("../img/00000050.png") repeat 0px 0px;
+        color: #fff;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 20px;
+
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+        filter: alpha(opacity=0); /* IE 5-7 */
+        -moz-opacity: 0; /* Netscape */
+        -khtml-opacity: 0;  /* Safari 1.x */
+        opacity: 0; /* Для остальных браузеров */
+        zoom: 1;
+
+        visibility: hidden;
+
+        -webkit-transition: all 0.4s ease-in;
+        -moz-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+    &:hover:after {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";  /* IE 8 */
+        filter: alpha(opacity=1); /* IE 5-7 */
+        -moz-opacity: 1; /* Netscape */
+        -khtml-opacity: 1;  /* Safari 1.x */
+        opacity: 1; /* Для остальных браузеров */
+        zoom: 1;
+
+        visibility: visible;
+    }
+}

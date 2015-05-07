@@ -1,0 +1,101 @@
+.buttons__wrap {
+    padding-bottom: 70px;
+}
+.buttons__block {
+    .clearfix();
+    margin-bottom: 23px;
+}
+
+.btn {
+    display: block;
+    background: @btn-green-bg;
+    line-height: 34px;
+    padding: 0px 41px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+
+    -moz-border-radius: @border-radius-base;
+    -webkit-border-radius: @border-radius-base;
+    -khtml-border-radius: @border-radius-base;
+    border-radius: @border-radius-base;
+
+    -moz-box-shadow: 0px 3px 0px @btn-green-shadow;
+    -webkit-box-shadow: 0px 3px 0px @btn-green-shadow;
+    box-shadow: 0px 3px 0px @btn-green-shadow;
+
+    &--small {
+        line-height: 26px;
+        padding: 0px 26px;
+    }
+
+    &:hover,
+    &--hover {
+        .btn-hover-bg(@btn-green-bg);
+        .btn-hover-shadow(@btn-green-shadow);
+    }
+
+    &:active,
+    &--active {
+        .btn-active-bg(@btn-green-bg);
+
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    &--grey {
+        background: @btn-grey-bg;
+
+        -moz-box-shadow: 0px 3px 0px @btn-grey-shadow;
+        -webkit-box-shadow: 0px 3px 0px @btn-grey-shadow;
+        box-shadow: 0px 3px 0px @btn-grey-shadow;
+
+        &:hover,
+        &-hover {
+            .btn-hover-bg(@btn-grey-bg);
+            .btn-hover-shadow(@btn-grey-shadow);
+        }
+
+        &:active,
+        &-active {
+            .btn-active-bg(@btn-grey-bg);
+
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    &--red {
+        background: @btn-red-bg;
+
+        -moz-box-shadow: 0px 3px 0px @btn-red-shadow;
+        -webkit-box-shadow: 0px 3px 0px @btn-red-shadow;
+        box-shadow: 0px 3px 0px @btn-red-shadow;
+
+        &:hover,
+        &-hover {
+            .btn-hover-bg(@btn-red-bg);
+            .btn-hover-shadow(@btn-red-shadow);
+        }
+
+        &:active,
+        &-active {
+            .btn-active-bg(@btn-red-bg);
+
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+.btn--marg-r {
+    margin-right: 30px;
+}

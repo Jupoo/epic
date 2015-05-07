@@ -1,0 +1,59 @@
+//Модульная сетка
+.generate-columns(@n, @i: 1) when (@i =< @n) { // Условие выполнения!
+	// @n — количество колонок
+	// @i — внутренний счетчик от 1 до @n
+	
+	// Собственно, генерация
+	.row--col-@{n}-@{i} {
+		width: (@i * 100% / @n);
+	}
+
+	// Рекурсовный самовызов с увеличенным на 1 счетчиком
+	.generate-columns(@n, (@i + 1));
+}
+.generate-columns(12);
+
+
+// Clearfix
+.clearfix() {
+  	&:before,
+  	&:after {
+	    content: " "; // 1
+	    display: table; // 2
+  	}
+  	&:after {
+    	clear: both;
+  	}
+}
+
+
+// Single side border-radius
+.border-top-radius(@border-radius-base) {
+  	border-top-right-radius: @border-radius-base;
+   	border-top-left-radius: @border-radius-base;
+}
+.border-right-radius(@radius) {
+  	border-bottom-right-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
+}
+.border-bottom-radius(@radius) {
+  	border-bottom-right-radius: @border-radius-base;
+   	border-bottom-left-radius: @border-radius-base;
+}
+.border-left-radius(@radius) {
+  	border-bottom-left-radius: @border-radius-base;
+    border-top-left-radius: @border-radius-base;
+}
+
+//Кнопки
+.btn-hover-bg (@color) {
+	background: lighten(@color, 5.4%);// ~ #addf7a
+}
+.btn-active-bg (@color) {
+  	background: darken(@color, 1.5%);// ~ #9cd066
+}
+.btn-hover-shadow (@color) {
+	-moz-box-shadow: 0px 3px 0px lighten(@color, 5.4%);// ~ #95cb5c
+	-webkit-box-shadow: 0px 3px 0px lighten(@color, 5.4%);
+	box-shadow: 0px 3px 0px lighten(@color, 3.8%);
+}
