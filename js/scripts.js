@@ -23,6 +23,23 @@ $(document).ready( function() {
         }
     });
 
+    //switch
+    $(document).on("click", ".switch__one", function () {
+        var wrap=$(this).closest(".switch");
+        if(wrap.find(".switch--one-l").hasClass("switch--one-active")) {
+            wrap.find(".switch--one-l").removeClass("switch--one-active");
+        }
+        else {
+            wrap.find(".switch--one-l").addClass("switch--one-active");
+        }
+        if(wrap.find(".switch--one-r").hasClass("switch--one-active")) {
+            wrap.find(".switch--one-r").removeClass("switch--one-active");
+        }
+        else {
+            wrap.find(".switch--one-r").addClass("switch--one-active");
+        }
+    });
+
     //tabs
     $(document).on("click", ".tabs__list-link", function (e) {
         e.preventDefault();//отмена действий по умолчанию
@@ -70,5 +87,22 @@ $(document).ready( function() {
             $(this).find(".ui-slider-handle:eq(0)").html("<span>"+ui.values[0]+"Р</span>");
             $(this).find(".ui-slider-handle:eq(1)").html("<span>"+ui.values[1]+"Р </span>");
         }
+    });
+
+    //Тултип
+    $('.note__text').hover(
+        function(){
+            $(this).closest(".note").find(".note__info-wrap").addClass("block");
+        },
+        function(){
+            $(this).closest(".note").find(".note__info-wrap").removeClass("block");
+        }
+    );
+
+    //Прогрессбар
+    $(function() {
+        $("#progressbar").progressbar({
+            value: 37
+        });
     });
 });

@@ -324,49 +324,85 @@ body {
   padding-top: 17px;
   margin-bottom: 30px;
 }
-.row--col-12-1 {
+.col-12-1 {
   width: 8.33333333%;
-}
-.row--col-12-2 {
-  width: 16.66666667%;
-}
-.row--col-12-3 {
-  width: 25%;
-}
-.row--col-12-4 {
-  width: 33.33333333%;
-}
-.row--col-12-5 {
-  width: 41.66666667%;
-}
-.row--col-12-6 {
-  width: 50%;
-}
-.row--col-12-7 {
-  width: 58.33333333%;
-}
-.row--col-12-8 {
-  width: 66.66666667%;
-}
-.row--col-12-9 {
-  width: 75%;
-}
-.row--col-12-10 {
-  width: 83.33333333%;
-}
-.row--col-12-11 {
-  width: 91.66666667%;
-}
-.row--col-12-12 {
-  width: 100%;
-}
-.row {
-  margin: 0px -18px;
-}
-.row__col {
   float: left;
   padding: 0px 18px;
   box-sizing: border-box;
+}
+.col-12-2 {
+  width: 16.66666667%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-3 {
+  width: 25%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-4 {
+  width: 33.33333333%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-5 {
+  width: 41.66666667%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-6 {
+  width: 50%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-7 {
+  width: 58.33333333%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-8 {
+  width: 66.66666667%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-9 {
+  width: 75%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-10 {
+  width: 83.33333333%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-11 {
+  width: 91.66666667%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.col-12-12 {
+  width: 100%;
+  float: left;
+  padding: 0px 18px;
+  box-sizing: border-box;
+}
+.row {
+  margin: 0px -18px;
+  /*&__col {
+        float: left;
+        padding: 0px 18px;
+        box-sizing: border-box;
+    }*/
 }
 .row:before,
 .row:after {
@@ -645,6 +681,55 @@ a:focus {
   zoom: 1;
   visibility: visible;
 }
+.pictures__flip-container {
+  perspective: 1000;
+}
+.pictures__flip-container:hover .pictures__flipper,
+.pictures__flip-container.hover .pictures__flipper {
+  transform: rotateY(180deg);
+}
+.pictures__flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.pictures__flip-front,
+.pictures__flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pictures__flip-front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  overflow: hidden;
+  height: 258px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+.pictures__flip-back {
+  transform: rotateY(180deg);
+  background: #fff;
+  height: 258px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: table;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+.pictures__flip-back span {
+  display: table-cell;
+  vertical-align: middle;
+}
 .forms__row {
   padding-bottom: 50px;
 }
@@ -658,6 +743,9 @@ a:focus {
 }
 .content-block--marg-bott-30 {
   margin-bottom: 30px;
+}
+.content-block--padd {
+  padding-bottom: 76px;
 }
 .forms__switches:before,
 .forms__switches:after {
@@ -853,21 +941,32 @@ a:focus {
 }
 .note {
   text-align: center;
+  position: relative;
 }
 .note__text {
   color: #e86060;
   font-style: italic;
+  cursor: pointer;
+}
+.note__info-wrap {
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.note__info-wrap.block {
+  display: block;
 }
 .note__info {
   color: #fff;
   font-size: 13px;
   line-height: 28px;
   padding: 0px 10px;
-  white-space: nowrap;
   background: #fc6e51;
   position: relative;
   display: inline-block;
-  margin-top: 18px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
@@ -1058,6 +1157,7 @@ a:focus {
   box-sizing: border-box;
   text-align: center;
   line-height: 32px;
+  cursor: pointer;
 }
 .switch--one-l {
   border-right: none;

@@ -3,10 +3,25 @@
 }
 .note {
     text-align: center;
+    position: relative;
 
     &__text {
         color: #e86060;
         font-style: italic;
+        cursor: pointer;
+    }
+
+    &__info-wrap {
+        position: absolute;
+        top: 38px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        display: none;
+
+        &.block {
+            display: block;
+        }
     }
 
     &__info {
@@ -14,11 +29,10 @@
         font-size: 13px;
         line-height: 28px;
         padding: 0px 10px;
-        white-space: nowrap;
+        //white-space: nowrap;
         background: @btn-red-bg;
         position: relative;
         display: inline-block;
-        margin-top: 18px;
 
         -moz-border-radius: @border-radius-base;
         -webkit-border-radius: @border-radius-base;

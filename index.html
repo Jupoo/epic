@@ -3,40 +3,40 @@
     <head>
         <title>Epic UI Kit</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
 		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui-slider.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     </head>
     <body>
 	    <main class="page-content">
 	    	<section class="grid">
 				<h2 class="page-header">Сетка</h2>
 	    		<div class="row grid__row">
-	    			<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
-					<div class="row__col row--col-12-1"><div class="grid__item"></div></div>
+	    			<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
+					<div class="col-12-1"><div class="grid__item"></div></div>
 	    		</div>
 	    	</section>
 	    	<section class="typography">
 	    		<h2 class="page-header">Типографика</h2>
 	    		<div class="row typography__row">
-	    			<div class="row__col row--col-12-6">
+	    			<div class="col-12-6">
 	    				<h1 class="typography--header-h1-pad header-h1">Почему непредсказуемо легато?</h1>
 	    				<h2 class="typography--header-h2-pad header-h2">Почему непредсказуемо легато?</h2>
 	    				<h3 class="typography--header-h3-pad header-h3">Почему непредсказуемо легато?</h3>
 	    				<h4 class="typography--header-h4-pad header-h4">Почему непредсказуемо легато?</h4>
 	    			</div>
-					<div class="row__col row--col-12-6">
+					<div class="col-12-6">
 						<p>Первая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p>
 						<div class="typography__links">
 							<a href="" class="typography__link">Ссылка</a>
@@ -77,28 +77,50 @@
 			<section class="pictures">
 				<h2 class="page-header">Картинки</h2>
 				<div class="row pictures__row">
-					<div class="row__col row--col-12-3">
+					<div class="col-12-3">
 						<div class="pictures__item">
 							<img src="img/picture.jpg" alt="picture" class="pictures__img" />
 						</div>
 					</div>
-					<div class="row__col row--col-12-3">
+					<div class="col-12-3">
 						<div class="pictures__item pictures--item-magnifier">
 							<img src="img/picture.jpg" alt="picture" class="pictures__img" />
 						</div>
 					</div>
-					<div class="row__col row--col-12-3">
+					<div class="col-12-3">
 						<div class="pictures__item pictures--item-title">
 							<img src="img/picture.jpg" alt="picture" class="pictures__img" />
 						</div>
 					</div>
-					<div class="row__col row--col-12-3"><div class="pictures__item"><img src="img/picture.jpg" alt="picture" class="pictures__img" /></div></div>
+					<div class="col-12-3">
+						<div class="pictures__item">
+							<div class="pictures__flip-container">
+								<div class="pictures__flipper">
+									<div class="pictures__flip-front">
+										<img src="img/picture.jpg" alt="picture" class="pictures__img" />
+									</div>
+									<div class="pictures__flip-back"><span>При наведении фотография разворачивается, и на другой стороне оказывается текст</span></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<!-- front content -->
+						</div>
+						<div class="back">
+							<!-- back content -->
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="forms">
 				<h2 class="page-header">Формы</h2>
 				<div class="row forms__row">
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block">
 							<label class="form-item form-item--marg-bott"><input type="text" value="" placeholder="Полковнику никто не пишет" /></label>
 							<label class="form-item form-item--marg-bott"><input type="text" value="Пишет!" placeholder="Полковнику никто не пишет" /></label>
@@ -106,7 +128,7 @@
 							<label class="form-item form-item--mess form-item--ok"><input type="text" value="А, нет, все правильно" placeholder="Полковнику никто не пишет" /></label>
 						</div>
 					</div>
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block">
 							<div class="closing">
 								<div class="closing__item">Быстрее<input type="hidden" value="" /></div>
@@ -115,7 +137,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block">
 							<div class="forms__switches">
 								<div class="forms__l">
@@ -141,7 +163,7 @@
 			<section class="interactive">
 				<h2 class="page-header">Интерактив</h2>
 				<div class="row interactive__row">
-					<div class="row__col row--col-12-6">
+					<div class="col-12-6">
 						<div class="slider">
 							<div class="bxslider">
 								<div class="slider__item">
@@ -159,13 +181,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="row__col row--col-12-6">
+					<div class="col-12-6">
 						<div class="row">
-							<div class="row__col row--col-12-6">
-								<div class="content-block content-block--marg-bott-30">
+							<div class="col-12-6">
+								<div class="content-block content-block--marg-bott-30 content-block--padd">
 									<div class="note">
 										<div class="note__text">Любить значит страдать?</div>
-										<div class="note__info">Положение сложное, Соня</div>
+										<div class="note__info-wrap">
+											<div class="note__info">Положение сложное, Соня</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -192,7 +216,7 @@
 			<section class="forms-advanced">
 				<h2 class="page-header">Продвинутые формы</h2>
 				<div class="row">
-					<div class="row__col row--col-12-6">
+					<div class="col-12-6">
 						<div class="content-block content-block--marg-bott-30">
 							<div class="steps">
 								<div class="steps__point steps--point-active"><div class="steps__point-bg"></div><div class="steps__point-text">Шаг 1</div></div>
@@ -203,7 +227,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block content-block--marg-bott-30">
 							<div class="slider-range">
 								<div class="slider-range__body"></div>
@@ -212,7 +236,7 @@
 					</div>
 				</div>
 				<div class="row forms-advanced__row">
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block">
 							<div class="progressbar progressbar--marg-bott-22">
 								<div class="progressbar__line">
@@ -223,6 +247,7 @@
 									<div class="progressbar__time progressbar--time-full">05:07</div>
 								</div>
 							</div>
+							<div id="progressbar"></div>
 							<div class="progressbar">
 								<div class="progressbar__percent">40%</div>
 								<div class="progressbar__line">
@@ -231,7 +256,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row__col row--col-12-4">
+					<div class="col-12-4">
 						<div class="content-block">
 							<div class="switch">
 								<div class="switch__one switch--one-l switch--one-active">Выбрано</div>
